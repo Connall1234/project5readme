@@ -1,36 +1,235 @@
+# Project Five Code Institute 
+
+## Table of Contents
+
+1. [The Application](#the-application)
+   - [Wireframes and eatures](#wireframes-and-features)
+   - [Other Features](#other-features-of-our-application)
+   - [Future Features](#future-features)
+2. [Design](#design)
+
+3. [User Stories and Project Goals](#user-stories-and-project-goals)
+   - [Epic: User Authentication](#epic-user-authentication)
+   - [Epic: Task Management](#epic-task-management)
+   - [Epic: Profile and Reward Management](#epic-profile-and-reward-management)
+4. [User Scenarios](#user-scenarios)
+   - [User 1: Sam](#user-1-sam)
+   - [User 2: Alice](#user-2-alice)
+5. [Testing Scenarios](#testing-scenarios)
+   - [Testing Scenario: Creating a Task](#testing-scenario-creating-a-task)
+   - [Testing Scenario: Editing a Task](#testing-scenario-editing-a-task)
+   - [Testing Scenario: Deleting a Task](#testing-scenario-deleting-a-task)
+   - [Testing Scenario: Marking Tasks as Complete/Incomplete](#testing-scenario-marking-tasks-as-completeincomplete)
+   - [Testing Scenario: Editing Your Profile](#testing-scenario-editing-your-profile)
+   - [Testing Scenario: Rewards Page](#testing-scenario-rewards-page)
+   - [Testing Scenario: Access Issues with Unauthorized URLs](#testing-scenario-access-issues-with-unauthorized-urls)
+   - [Testing Scenario: Sign-Up and Login](#testing-scenario-sign-up-and-login)
+6. [Further Testing](#further-testing)
+   - [ES7 Testing](#es7-testing)
+   - [PEP8 Linter](#pep8-linter)
+   - [Lighthouse](#lighthouse)
+   - [W3C](#w3c)
+7. [Technologies](#technologies)
+8. [Bugs](#bugs)
+   - [Fixed Bugs](#fixed-bugs)
+   - [Current Bugs](#current-bugs)
+9. [Entity-Relationship Diagram](#entity-relationship-diagram)
+    - [Relationships](#relationships)
+
+
+
+Relationships
+
+
+
+## User Scenarios
+
+### User 1: Sam
+
+## The Application
+
+### Wireframes and features
+
+Welcome to OnTrack, a task managing application that lets you create, edit, delete, and tick off tasks during your day. We also feature a profile section where you can change your profile image and your bio, as well as some rewards that you can track along the way.
+
+The purpose of this project was to bring to life a task managing app that would be simple and effective to use, without having too many intricacies to work through.
+
+We wanted to make an application that would be easy to understand right away and be useful to a potential customer.
+
+**Sign Up**
+
+![Wireframe SignUp](path/to/image/SignUpWireframe.png)
+
+As you can see, we kept the design fairly simple with the user only needing to add in their username and their password. We also included our logo for the application on the right-hand side so potential users could get an idea of the application right away. We also added an embedded link if the person would like to sign in instead, and a link to the about page if they wanted some more information right away.
+
+![SignUp SML](path/to/image/SignUpSML.png)
+![SignUp MED](path/to/image/SignUpMED.png)
+![SignUp LRG](path/to/image/SignUpLRG.png)
+
+**Sign In**
+
+![Wireframe SignIn](path/to/image/SignInWireframe.png)
+
+For the sign-in page, we also kept it simple, looking much like the sign-up page, with the two links included at the bottom.
+
+![SignIn SML](path/to/image/SignInSML.png)
+![SignIn MED](path/to/image/SignInMED.png)
+![SignIn LRG](path/to/image/SignInLRG.png)
+
+**About**
+
+![Wireframe About](path/to/image/AboutWireframe.png)
+
+We added this page so the user could learn more about the app, just in case they were unsure of what our app was about. We also added this for visually impaired users; this is just a section about what you can do with our app.
+
+![About SML](path/to/image/AboutSML.png)
+![About MED](path/to/image/AboutMED.png)
+![About LRG](path/to/image/AboutLRG.png)
+
+**NavBar**
+
+Our NavBar will change once someone is logged in or out, and will also be highlighted to the person on what page they are currently on. We have also made the NavBar collapsible on smaller screens.
+
+**Home Page**
+
+![Wireframe Home](path/to/image/HomeWireframe.png)
+
+This is our main landing page, where the user can see their calendar, switch between months, and check their tasks on a given day.
+
+We made sure to highlight the current day in green so the user knows what day it is. We also included the tasks on a given day to read “one task today” or “two tasks today” or however many. On the smaller screens, we did notice that this was too cramped, so instead, we grayed out the days that had events on them.
+
+We also have our task view at the bottom of the page, which includes icons for view, edit, delete, and mark as complete/incomplete (which will go to their completed tasks on the profile page).
+
+We also included an add task to this component and the user will be taken to add a task on that day, as opposed to the add task button on the top left, which will go to a task for that day.
+
+![Home SML](path/to/image/HomeSML.png)
+![Home MED](path/to/image/HomeMED.png)
+![Home LRG](path/to/image/HomeLRG.png)
+
+**Create Task**
+
+![Wireframe Create Task](path/to/image/CreateTaskWireframe.png)
+
+Here we have our create task page. The user can add a title and pick amongst other details of their task. We included a date picker for the date of the task and we also included some error handling if the user chooses to create a task in the past.
+
+![Create Task SML](path/to/image/CreateTaskSML.png)
+![Create Task MED](path/to/image/CreateTaskMED.png)
+![Create Task LRG](path/to/image/CreateTaskLRG.png)
+
+**View Task**
+
+![Wireframe View Task](path/to/image/ViewTaskWireframe.png)
+
+We added a view task page for this app so the user can check for more information about their task, like description, category, or type of task. We made this read-only, just in case the user might change something and not realize.
+
+![View Task SML](path/to/image/ViewTaskSML.png)
+![View Task MED](path/to/image/ViewTaskMED.png)
+![View Task LRG](path/to/image/ViewTaskLRG.png)
+
+**Edit Task**
+
+![Wireframe Edit Task](path/to/image/EditTaskWireframe.png)
+
+This page is quite similar to the create task page for layout. We have also included error handling to make sure the user actually wants to update a task, and an additional warning so they know they are changing a task to be in the past.
+
+![Edit Task SML](path/to/image/EditTaskSML.png)
+![Edit Task MED](path/to/image/EditTaskMED.png)
+![Edit Task LRG](path/to/image/EditTaskLRG.png)
+
+**Profile**
+
+![Wireframe Profile](path/to/image/ProfileWireframe.png)
+
+Here we give the user a chance to look at their profile. They can change their image, their bio, and look at their completed tasks so far. We’ve also included an edit profile section alongside a rewards page.
+
+![Profile SML](path/to/image/ProfileSML.png)
+![Profile MED](path/to/image/ProfileMED.png)
+![Profile LRG](path/to/image/ProfileLRG.png)
+
+**Edit Profile**
+
+![Wireframe Profile Edit](path/to/image/ProfileEditWireframe.png)
+
+Here we have kept the form simple, and users can upload their image or change their bio on this screen.
+
+![Profile Edit SML](path/to/image/ProfileEditSML.png)
+![Profile Edit MED](path/to/image/ProfileEditMED.png)
+![Profile Edit LRG](path/to/image/ProfileEditLRG.png)
+
+**Rewards Page**
+
+![Wireframe Rewards](path/to/image/RewardsWireframe.png)
+
+We included a simple rewards page to keep the user engaged and give them something to work towards. The rewards are locked and gray until the user completes the task, after which the color appears. We went for bright colors to keep the user enthusiastic. One of the challenges is to never have an overdue task, so we added this to always keep the user interested.
+
+![Rewards SML](path/to/image/RewardsSML.png)
+![Rewards MED](path/to/image/RewardsMED.png)
+![Rewards LRG](path/to/image/RewardsLRG.png)
+
+### Other Features of Our Application
+
+The main features of this application are to let users see their whole month in front of them so they know what they have coming up. We created the page in a way that is user-friendly and easy to understand.
+
+We have also included the icons for viewing, editing, and deleting to give the app more of a well-developed feel, which we hope will interest the user, as well as the checkbox, which will prompt up a small “task complete/incomplete” when the user ticks it.
+
+We also put a line through the task if it is complete so the user has another way to identify that their task is complete.
+
+![Complete, Crossed Out Task Notification](path/to/image/CompleteCrossedOutTaskNotification.png)
+
+### Future Features
+
+**Developing Tasks**
+
+We would like to add more in-depth analysis for users when they go to look through past tasks, possibly filtering by type or task, or by name. We would also like to give the option of attaching a picture or file to a task.
+
+**Adding Friends**
+
+We would also like to give the chance to follow friends and share tasks with them.
+
+**More Rewards**
+
+We would like to increase the types of rewards and the ways in which they’re given, possibly adding a trophy room where users can see all the rewards they’ve earned, and also giving them a chance to compete with friends for certain rewards.
+
+**Connect to Other Apps**
+
+We would like to be able to connect to someone's social media or Facebook and be easily reachable from there if they need to add a task or invite a friend to a task.
+
+## Design
+
+We went with a light design with some other bright colors splashed in for this project. The reason for this is we want people to feel energized and engaged while using this application, and the bright color reflects someone who is more energetic, as opposed to a darker background which might not evoke too much energy. As mentioned before, we would like to add a dark mode for those users who want it.
+
 ## User Stories and Project Goals
 
 ### Epic: User Authentication
 
 - **User Story 1: User Sign-Up Form**
-- **Priority**: High
-- **Acceptance Criteria**:
-- User can enter a valid email and password.
-- System validates input and shows error messages for invalid inputs.
-- Confirmation email is sent upon successful sign-up.
-- **Related Page**: Sign-Up Page (xxx)
-- **Mapping to Goals**: This feature enables users to create accounts, which is critical for user management.
-- **GitHub Issue**: [#16](https://github.com/your-repo/issues/16)
+  - **Priority**: High
+  - **Acceptance Criteria**:
+    - User can enter a valid email and password.
+    - System validates input and shows error messages for invalid inputs.
+    - Confirmation email is sent upon successful sign-up.
+  - **Related Page**: Sign-Up Page (xxx)
+  - **Mapping to Goals**: This feature enables users to create accounts, which is critical for user management.
+  - **GitHub Issue**: [#16](https://github.com/your-repo/issues/16)
 
 - **User Story 2: User Sign-In Form**
-- **Priority**: High
-- **Acceptance Criteria**:
-- User can log in with valid credentials.
-- System displays error messages for incorrect credentials.
-- **Related Page**: Sign-In Page (xxx)
-- **Mapping to Goals**: This feature allows users to access their accounts, supporting user engagement and access control.
-- **GitHub Issue**: [#17](https://github.com/your-repo/issues/17)
+  - **Priority**: High
+  - **Acceptance Criteria**:
+    - User can log in with valid credentials.
+    - System displays error messages for incorrect credentials.
+  - **Related Page**: Sign-In Page (xxx)
+  - **Mapping to Goals**: This feature allows users to access their accounts, supporting user engagement and access control.
+  - **GitHub Issue**: [#17](https://github.com/your-repo/issues/17)
 
 ### Alignment with Project Goals
 - **Goal 1**: Implement secure user authentication.
-- Achieved through user stories related to sign-up and sign-in forms.
+  - Achieved through user stories related to sign-up and sign-in forms.
 
 - **Goal 2**: Enhance user experience and security.
-- This includes ensuring smooth and secure login/signup processes, improving user satisfaction, and protecting user data.
+  - This includes ensuring smooth and secure login/signup processes, improving user satisfaction, and protecting user data.
 
 - **Goal 3**: Facilitate user access to the application.
-- Ensures that users can easily and securely access their accounts, which is essential for the functionality of the application.
-
+  - Ensures that users can easily and securely access their accounts, which is essential for the functionality of the application.
 
 ### Epic: Task Management
 
@@ -83,49 +282,6 @@
 
 - **Goal 3**: Enhance task tracking and organization.
   - Ensures that users can easily keep track of their tasks, mark them as complete, and remove obsolete ones.
-
-### Epic: Profile and Reward Management
-
-- **User Story 1: View Profile**
-  - **Priority**: High
-  - **Acceptance Criteria**:
-    - User can view their profile information including name, email, and profile picture.
-    - User can view their recent activities and any relevant statistics.
-    - Profile page is accessible from the user’s account menu.
-  - **Related Page**: Profile Page (xxx)
-  - **Mapping to Goals**: This feature allows users to see their profile details and activity, enhancing their overall experience and engagement with the application.
-  - **GitHub Issue**: [#22](https://github.com/your-repo/issues/22)
-
-- **User Story 2: Edit Profile**
-  - **Priority**: High
-  - **Acceptance Criteria**:
-    - User can update their profile information including name, email, and profile picture.
-    - System validates input and shows error messages for invalid or incomplete details.
-    - Changes are saved and updated in the user's profile.
-  - **Related Page**: Edit Profile Page (xxx)
-  - **Mapping to Goals**: This feature allows users to keep their profile information up-to-date, which is crucial for maintaining accurate user data and personalization.
-  - **GitHub Issue**: [#23](https://github.com/your-repo/issues/23)
-
-- **User Story 3: View Rewards**
-  - **Priority**: Medium
-  - **Acceptance Criteria**:
-    - User can view their rewards, including earned points, badges, or other incentives.
-    - Rewards page displays a list of rewards with details such as description and date earned.
-    - Rewards page is accessible from the user’s account menu.
-  - **Related Page**: Rewards Page (xxx)
-  - **Mapping to Goals**: This feature allows users to track their achievements and rewards, motivating continued engagement and usage of the application.
-  - **GitHub Issue**: [#24](https://github.com/your-repo/issues/24)
-
-### Alignment with Project Goals
-- **Goal 1**: Enhance user profile management.
-  - Achieved through user stories related to viewing and editing profiles.
-
-- **Goal 2**: Promote user engagement through rewards.
-  - Implemented via the rewards viewing functionality, encouraging users to participate and interact with the application.
-
-- **Goal 3**: Improve user personalization and interaction.
-  - By allowing users to manage their profiles and view their rewards, the application offers a more tailored and engaging experience.
-
 
 ### Epic: Profile and Reward Management
 
@@ -241,13 +397,6 @@
   - **Advanced Task Management**: Features like task analytics, priority settings, and advanced filters.
   - **Comprehensive Rewards System**: Detailed insights into rewards, including historical data and future goals.
 
-
-
-
-
-
-
-
 ## Testing Scenarios
 
 ### Testing Scenario: Creating a Task
@@ -295,8 +444,6 @@ To ensure that the task creation functionality works as expected, including vali
 - **Past Date Input**: Setting the start date to "2023-01-01" (a date in the past).
 - **Expected Behavior**: A notification should appear, such as "This is a task in the past. Are you sure you want to update it?".
 
-
-
 ### Testing Scenario: Editing a Task
 
 #### **Objective**
@@ -321,8 +468,6 @@ To ensure that the task editing functionality works as expected, including valid
 **Example**:
 - **Invalid Input**: Leaving the title field empty.
 - **Expected Behavior**: An error message such as "Title is required" should appear, and the task should not be updated.
-
----
 
 #### **Test Case 2: Past Date Notification**
 
@@ -360,7 +505,6 @@ To ensure that the task editing functionality works as expected, including valid
 - **Change Confirmation**: After editing the task details.
 - **Expected Behavior**: A confirmation message such as "Are you sure you want to save these changes?" should appear before the changes are finalized.
 
-
 ### Testing Scenario: Deleting a Task
 
 #### **Objective**
@@ -385,8 +529,6 @@ To verify that the task deletion functionality works as expected, including the 
 **Example**:
 - **Deletion Confirmation**: Click on "Delete" for a task.
 - **Expected Behavior**: A confirmation dialog should appear with a message like "Are you sure you want to delete this task?" with options to confirm or cancel.
-
----
 
 ### Testing Scenario: Marking Tasks as Complete/Incomplete
 
@@ -413,8 +555,6 @@ To ensure that the task completion status can be toggled and the changes are ref
 - **Completion Action**: Click "Mark as Complete" for a task.
 - **Expected Behavior**: The task should be displayed with a "Completed" status, and this status should be visible in the profile section.
 
----
-
 #### **Test Case 2: Mark Task as Incomplete**
 
 **Description**: Verify that a task marked as complete can be toggled back to incomplete, and the change is reflected in the profile section.
@@ -433,7 +573,6 @@ To ensure that the task completion status can be toggled and the changes are ref
 **Example**:
 - **Reversion Action**: Click "Mark as Incomplete" for a completed task.
 - **Expected Behavior**: The task should be displayed with an "Incomplete" status, and this status should be visible in the profile section.
-
 
 ### Testing Scenario: Editing Your Profile
 
@@ -462,8 +601,6 @@ To verify that users can successfully edit their profile, including changing the
 - **Edit Action**: Update the bio to "New bio text" and upload a new profile picture.
 - **Expected Behavior**: The profile should display "New bio text" in the bio section and the new profile picture after saving.
 
----
-
 ### Testing Scenario: Rewards Page
 
 #### **Objective**
@@ -488,9 +625,6 @@ To ensure that the rewards page accurately reflects the number of tasks marked a
 **Example**:
 - **Completion Action**: Mark several tasks as complete.
 - **Expected Behavior**: The rewards page should show an updated count of completed tasks and any associated rewards or achievements.
-
-
-## Testing Scenarios
 
 ### Testing Scenario: Access Issues with Unauthorized URLs
 
@@ -517,8 +651,6 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **URL Attempted**: `https://yourapp.com/tasks/123`
 - **Expected Behavior**: User B sees an error message indicating that they do not have permission to view or edit the task.
 
----
-
 #### **Test Case 2: Unauthorized Access to Profile**
 
 **Description**: Verify that users cannot access or view profiles that do not belong to them by pasting the URL into a different browser.
@@ -538,8 +670,6 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **URL Attempted**: `https://yourapp.com/profiles/456`
 - **Expected Behavior**: User B receives a "Request Failed" message indicating they cannot access the profile.
 
----
-
 #### **Test Case 3: Unauthorized Access to Edit Profile**
 
 **Description**: Verify that users cannot access or save changes to profiles that do not belong to them by pasting the URL into a different browser.
@@ -558,9 +688,6 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 **Example**:
 - **URL Attempted**: `https://yourapp.com/profiles/456/edit`
 - **Expected Behavior**: User B encounters an error message saying "Failed to Save" when trying to make changes.
-
-
-## Testing Scenarios
 
 ### Testing Scenario: Sign-Up and Login
 
@@ -588,8 +715,6 @@ To verify that the application correctly handles validation errors during the si
 **Image**:
 ![Sign-Up Validation Example](insert-your-image-link-here)
 
----
-
 #### **Test Case 2: Login Error Handling**
 
 **Description**: Ensure that the login form provides clear feedback when incorrect credentials are entered.
@@ -607,3 +732,126 @@ To verify that the application correctly handles validation errors during the si
 
 **Image**:
 ![Login Error Example](insert-your-image-link-here)
+
+## Further Testing
+
+### ES7 Testing
+
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+
+We tested our frontend application using an ES7 Linter in VSCode. We can see that all JavaScript files are returning with no errors, and we added a CSS file just to show that the linter is properly working.
+
+### PEP8 Linter
+
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+
+We used Code Institute’s PEP8 Linter to check for any errors in our backend code. As you can see, none were found.
+
+### Lighthouse
+
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+
+We checked our Lighthouse score on each of our pages, and as you can see, we scored quite highly in each different metric.
+
+### W3C
+
+![Inset image here](link-to-your-image)
+![Inset image here](link-to-your-image)
+
+We used W3C to check our HTML and CSS to make sure there were no errors. As you can see, we have no errors in our code.
+
+## Technologies
+
+Here is a list of the technologies we used in this project:
+
+### Frontend
+- **React** - A JavaScript library for building user interfaces.
+- **React Router Dom** - Declarative routing for React apps.
+- **Bootstrap** - A popular CSS framework for responsive web development.
+- **React Bootstrap** - Bootstrap components built with React.
+- **Axios** - A promise-based HTTP client for the browser and Node.js.
+- **Date-fns** - A modern JavaScript date utility library.
+- **React Datepicker** - A simple and reusable datepicker component for React.
+- **React Infinite Scroll Component** - A scrollable component for React with infinite scroll.
+  
+### Backend
+- **Python** - A high-level, interpreted programming language.
+- **Django** - A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- **Django REST Framework** - A powerful toolkit for building Web APIs in Django.
+- **Django Allauth** - Integrated set of Django applications dealing with account authentication, registration, etc.
+- **Dj-Database-URL** - A utility to use the `DATABASE_URL` environment variable to configure Django.
+- **Django Cloudinary Storage** - An integration for using Cloudinary with Django for storing media files.
+- **Gunicorn** - A Python WSGI HTTP Server for UNIX.
+- **Pillow** - A Python Imaging Library (PIL) that adds support for opening, manipulating, and saving image files.
+- **Whitenoise** - Static file serving for Python web apps with WhiteNoise.
+
+### Development Tools
+- **ESLint** - A tool for identifying and fixing JavaScript code issues.
+- **PEP8** - A tool for ensuring Python code follows style conventions.
+- **Prettier** - A code formatter for maintaining consistent code style.
+- **AutoPEP8** - A tool that automatically formats Python code to conform to the PEP 8 style guide.
+- **Jest** - A JavaScript testing framework.
+- **Testing Library (React)** - Simple and complete testing utilities that encourage good testing practices for React apps.
+
+### Other Libraries & Utilities
+- **Cloudinary** - A cloud-based service for hosting and transforming images and videos.
+- **Crispy Bootstrap5** - A Django app that allows you to create Bootstrap 5 forms using Django forms.
+- **BeautifulSoup4** - A Python library for parsing HTML and XML documents.
+- **Requests** - A simple HTTP library for Python.
+- **Psycopg2** - PostgreSQL adapter for Python.
+- **Flask** - A lightweight WSGI web application framework in Python.
+- **Moment.js** - A JavaScript library for parsing, validating, manipulating, and formatting dates.
+- **JWT-Decode** - Decode JSON Web Tokens in JavaScript.
+
+## Bugs
+
+### Fixed Bugs
+
+#### Overdue Count
+Initially, the overdue count was calculated entirely on the frontend. However, we encountered a persistent bug that broke the code. After extensive debugging, we decided to handle most of the overdue count logic in the backend, with some assistance from the frontend. We also faced another bug where the frontend couldn't interpret the backend data due to it being sent in the wrong format. This issue was resolved by ensuring the data was transmitted in the correct format.
+
+#### Year Format
+We encountered a bug where the frontend wasn't sending the task date in the correct format. Through debugging, we discovered the mismatch between how the backend processed dates and how the frontend handled them. We fixed this by aligning the date format between the backend and frontend.
+
+#### Changing Profile Picture
+There was an issue with uploading profile pictures to Cloudinary. After reviewing the settings in `settings.py`, we identified an error in our API key configuration, which caused the images not to be sent correctly. Once the API key issue was corrected, the uploads worked as expected.
+
+### Current Bugs
+
+#### Websocket
+We are currently experiencing an issue where the console logs a message every minute while the application is idle, indicating that a websocket is not connecting. However, this does not appear to impact the application's functionality. We plan to address this bug in the future.
+
+#### Babel Plugin
+We receive a warning in our terminal about needing to update a Babel plugin. We previously attempted to make this change, but it completely broke the application. We will work on resolving this issue in the future.
+
+
+## Entity-Relationship Diagram
+
+The ER (Entity-Relationship) diagram represents the relationships between the three main models in the Django backend: `User`, `Profile`, and `Task`. 
+
+### Relationships
+
+- **User to Profile: One-to-One (1:1)**
+  - The `User` model, provided by Django's authentication system, has a One-to-One relationship with the `Profile` model. This means that each user in the system has one and only one profile, which contains additional information such as a bio and profile image.
+
+- **User to Task: One-to-Many (1:N)**
+  - The `User` model has a One-to-Many relationship with the `Task` model. This allows each user to create multiple tasks, where each task is associated with a specific user. The `Task` model includes attributes such as the task title, description, start date, completion status, priority, and category, enabling users to manage and organize their tasks effectively.
+
+The relationships between these models ensure that the system can manage user profiles and tasks in a scalable and organized manner.
+
+![ER Diagram](path/to/your/er-diagram.png)
