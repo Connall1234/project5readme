@@ -43,7 +43,6 @@
 12. [Credits](#credits)
 
 
-
 ## The Application
 
 ### Wireframes and features
@@ -57,25 +56,32 @@ We wanted to make an application that would be easy to understand right away and
 **Sign Up**
 
 ![Wireframe SignUp SML](assets/images/SignUpPage/SignUpPage_Small_Wireframe.jpg)
+
 ![Wireframe SignUp MED](assets\images\SignUpPage\SignUpPage_Med_Wireframe.jpg)
 
 As you can see, we kept the design fairly simple with the user only needing to add in their username and their password. We also included our logo for the application on the right-hand side so potential users could get an idea of the application right away. We also added an embedded link if the person would like to sign in instead, and a link to the about page if they wanted some more information right away.
 
 ![SignUp SML](assets\images\SignUpPage\SignUpPage_Small.jpg)
+
 ![SignUp MED](assets\images\SignUpPage\SignUpPage_Med.jpg)
+
 ![SignUp LRG](assets\images\SignUpPage\SignUpPage_Lrg.jpg)
 
 **Sign In**
 
 ![Wireframe SignIn SML](assets\images\SignInPage\SignInPage_Small_Wireframe.jpg)
+
 ![Wireframe SignIn MED](assets\images\SignInPage\SignInPage_Medium_Wireframe.jpg)
+
 ![Wireframe SignIn LRG](assets\images\SignInPage\SignInPage_Large_Wireframe.jpg)
 
 
 For the sign-in page, we also kept it simple, looking much like the sign-up page, with the two links included at the bottom.
 
 ![SignIn SML](assets\images\SignInPage\SignInPage_Small.jpg)
+
 ![SignIn MED](assets\images\SignInPage\SignInPage_Medium.jpg)
+
 ![SignIn LRG](assets\images\SignInPage\SignInPage_Large.jpg)
 
 **About**
@@ -85,7 +91,9 @@ For the sign-in page, we also kept it simple, looking much like the sign-up page
 We added this page so the user could learn more about the app, just in case they were unsure of what our app was about. We also added this for visually impaired users; this is just a section about what you can do with our app.
 
 ![About SML](assets\images\AboutPage\AboutPage_SML.jpg)
+
 ![About MED](assets\images\AboutPage\AboutPage_MED.jpg)
+
 ![About LRG](assets\images\AboutPage\AboutPage_LRG.jpg)
 
 **NavBar**
@@ -105,7 +113,9 @@ We also have our task view at the bottom of the page, which includes icons for v
 We also included an add task to this component and the user will be taken to add a task on that day, as opposed to the add task button on the top left, which will go to a task for that day.
 
 ![Home SML](assets\images\CalendarPage\CalendarPage_SML.jpg)
+
 ![Home MED](assets\images\CalendarPage\CalendarPage_MED.jpg)
+
 ![Home LRG](assets\images\CalendarPage\CalendarPage_LRG.jpg)
 
 **Create Task**
@@ -115,7 +125,9 @@ We also included an add task to this component and the user will be taken to add
 Here we have our create task page. The user can add a title and pick amongst other details of their task. We included a date picker for the date of the task and we also included some error handling if the user chooses to create a task in the past.
 
 ![Create Task SML](assets\images\CreateTaskPage\CreateTask_SML.jpg)
+
 ![Create Task MED](assets\images\CreateTaskPage\CreateTask_MED.jpg)
+
 ![Create Task LRG](assets\images\CreateTaskPage\CreateTask_LRG.jpg)
 
 **View Task**
@@ -125,7 +137,9 @@ Here we have our create task page. The user can add a title and pick amongst oth
 We added a view task page for this app so the user can check for more information about their task, like description, category, or type of task. We made this read-only, just in case the user might change something and not realize.
 
 ![View Task SML](assets\images\ViewTaskPage\ViewTask_SML.jpg)
+
 ![View Task MED](assets\images\ViewTaskPage\ViewTask_MED.jpg)
+
 ![View Task LRG](assets\images\ViewTaskPage\ViewTask_LRG.jpg)
 
 **Edit Task**
@@ -135,7 +149,9 @@ We added a view task page for this app so the user can check for more informatio
 This page is quite similar to the create task page for layout. We have also included error handling to make sure the user actually wants to update a task, and an additional warning so they know they are changing a task to be in the past.
 
 ![Edit Task SML](assets\images\EditTaskPage\EditTaskPage_SML.jpg)
+
 ![Edit Task MED](assets\images\EditTaskPage\EditTaskPage_MED.jpg)
+
 ![Edit Task LRG](assets\images\EditTaskPage\EditTaskPage_LRG.jpg)
 
 **Profile**
@@ -145,7 +161,9 @@ This page is quite similar to the create task page for layout. We have also incl
 Here we give the user a chance to look at their profile. They can change their image, their bio, and look at their completed tasks so far. We’ve also included an edit profile section alongside a rewards page.
 
 ![Profile SML](assets\images\ProfilePage\ProfilePage_SML.jpg)
+
 ![Profile MED](assets\images\ProfilePage\ProfilePage_MED.jpg)
+
 ![Profile LRG](assets\images\ProfilePage\ProfilePage_LRG.jpg)
 
 **Edit Profile**
@@ -155,19 +173,25 @@ Here we give the user a chance to look at their profile. They can change their i
 Here we have kept the form simple, and users can upload their image or change their bio on this screen.
 
 ![Profile Edit SML](assets\images\EditProfilePage\EditProfile_SML.jpg)
+
 ![Profile Edit MED](assets\images\EditProfilePage\EditProfile_MED.jpg)
+
 ![Profile Edit LRG](assets\images\EditProfilePage\EditProfile_LRG.jpg)
 
 **Rewards Page**
 
 ![Wireframe Rewards SML](assets\images\RewardsPage\RewardsPage_SML_Wireframe.jpg)
+
 ![Wireframe Rewards MED](assets\images\RewardsPage\RewardsPage_MED_Wireframe.jpg)
+
 ![Wireframe Rewards LRG](assets\images\RewardsPage\RewardsPage_LRG_Wireframe.jpg)
 
 We included a simple rewards page to keep the user engaged and give them something to work towards. The rewards are locked and gray until the user completes the task, after which the color appears. We went for bright colors to keep the user enthusiastic. One of the challenges is to never have an overdue task, so we added this to always keep the user interested.
 
 ![Rewards SML](assets\images\RewardsPage\RewardsPage_SML.jpg)
+
 ![Rewards MED](assets\images\RewardsPage\RewardsPage_MED.jpg)
+
 ![Rewards LRG](assets\images\RewardsPage\RewardsPage_LRG.jpg)
 
 ### Other Features of Our Application
@@ -179,6 +203,7 @@ We have also included the icons for viewing, editing, and deleting to give the a
 We also put a line through the task if it is complete so the user has another way to identify that their task is complete.
 
 ![Complete, Crossed Out Task Notification](assets\images\Taskcomplete\testing_task_complete.jpg)
+
 ![Incomplete, Task Notification](passets\images\Taskcomplete\testing_task_incomplete.jpg)
 
 
@@ -431,6 +456,7 @@ To ensure that the task creation functionality works as expected, including vali
 - **Expected Behavior**: An error message such as "Title is required" should appear, and the task should not be created.
 
 **Image**:
+
 ![Test Data Validation](assets\images\CreateTask\testing_create_task_please_fill_in_fields.jpg)
 
 #### **Test Case 2: Past Date Notification**
@@ -452,6 +478,7 @@ To ensure that the task creation functionality works as expected, including vali
 - **Expected Behavior**: A notification should appear, such as "This is a task in the past. Are you sure you want to update it?".
 
 **Image**:
+
 ![Test Past Date](assets\images\CreateTask\testing_create_task_task_in_past.jpg)
 
 ### Testing Scenario: Editing a Task
@@ -480,6 +507,7 @@ To ensure that the task editing functionality works as expected, including valid
 - **Expected Behavior**: An error message such as "Title is required" should appear, and the task should not be updated.
 
 **Image**:
+
 ![Test Edit Task Validate Data](assets\images\Edittask\testing_edit_task_fill_in_fields.jpg)
 
 #### **Test Case 2: Past Date Notification**
@@ -501,6 +529,7 @@ To ensure that the task editing functionality works as expected, including valid
 - **Expected Behavior**: A notification should appear, such as "This is a task in the past. Are you sure you want to update it?".
 
 **Image**:
+
 ![Test Edit Task Past Date](assets\images\Edittask\testing_edit_task_past_task.jpg)
 
 #### **Test Case 3: Edit Confirmation Notification**
@@ -520,6 +549,7 @@ To ensure that the task editing functionality works as expected, including valid
 - **Expected Behavior**: A confirmation message such as "Are you sure you want to save these changes?" should appear before the changes are finalized.
 
 **Image**:
+
 ![Sign-Up Validation Example](insert-your-image-link-here)
 
 ### Testing Scenario: Deleting a Task
@@ -548,6 +578,7 @@ To verify that the task deletion functionality works as expected, including the 
 - **Expected Behavior**: A confirmation dialog should appear with a message like "Are you sure you want to delete this task?" with options to confirm or cancel.
 
 **Image**:
+
 ![Sign-Up Validation Example](insert-your-image-link-here)
 
 ### Testing Scenario: Marking Tasks as Complete/Incomplete
@@ -576,6 +607,7 @@ To ensure that the task completion status can be toggled and the changes are ref
 - **Expected Behavior**: The task should be displayed with a "Completed" status, and this status should be visible in the profile section.
 
 **Image**:
+
 ![Test Mark Task as Complete](assets\images\Taskcomplete\testing_task_complete.jpg)
 
 #### **Test Case 2: Mark Task as Incomplete**
@@ -598,6 +630,7 @@ To ensure that the task completion status can be toggled and the changes are ref
 - **Expected Behavior**: The task should be displayed with an "Incomplete" status, and this status should be visible in the profile section.
 
 **Image**:
+
 ![Test Mark Task as Incomplete](assets\images\Taskcomplete\testing_task_incomplete.jpg)
 
 ### Testing Scenario: Editing Your Profile
@@ -628,6 +661,7 @@ To verify that users can successfully edit their profile, including changing the
 - **Expected Behavior**: The profile should display "New bio text" in the bio section and the new profile picture after saving.
 
 **Image**:
+
 ![Sign-Up Validation Example](insert-your-image-link-here)
 
 ### Testing Scenario: Rewards Page
@@ -681,6 +715,7 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **Expected Behavior**: User B sees an error message indicating that they do not have permission to view or edit the task.
 
 **Image**:
+
 ![Test Unable to access others view task pages](assets\images\ViewTask\testing_view_task_cant_view_other_accounts_tasks.jpg)
 
 #### **Test Case 2: Unauthorized Access to Profile**
@@ -703,6 +738,7 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **Expected Behavior**: User B receives a "Request Failed" message indicating they cannot access the profile.
 
 **Image**:
+
 ![Test Can't Access Others Profile](assets\images\Profile\testing_profile_can't_access_other_profiles.jpg)
 
 #### **Test Case 3: Unauthorized Access to Edit Profile**
@@ -725,6 +761,7 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **Expected Behavior**: User B encounters an error message saying "Failed to Save" when trying to make changes.
 
 **Image**:
+
 ![Sign-Up Validation Example](assets\images\Profile\testing_edit_profile_can't_access_other_profiles.jpg)
 
 ### Testing Scenario: Sign-Up and Login
@@ -751,7 +788,9 @@ To verify that the application correctly handles validation errors during the si
 - **Error Message for Mismatched Passwords**: "Passwords do not match. Please re-enter your password."
 
 **Image**:
+
 ![Test Sign-Up Validation Example](assets\images\SignUp\testing_sign_up_password-close-to-username.jpg)
+
 ![Test Sign-Up Validation Example](assets\images\SignUp\testing_sign_up_password-common-user-exists.jpg)
 
 #### **Test Case 2: Login Error Handling**
@@ -770,6 +809,7 @@ To verify that the application correctly handles validation errors during the si
 - **Error Message**: "Invalid username or password. Please check your credentials and try again."
 
 **Image**:
+
 ![Test Login Error Example](assets\images\SignIn\sign_in_test_wrong_login.jpg)
 
 ## Further Testing
@@ -777,6 +817,7 @@ To verify that the application correctly handles validation errors during the si
 ### ES7 Testing
 
 ![ES7 Linter Image One](assets\images\ES7Linter\Linteer_from_axios_to_about.jpg)
+
 ![ES7 Linter Image Two](assets\images\ES7Linter\Linteer_from_about_to_config.jpg)
 
 We tested our frontend application using an ES7 Linter in VSCode. We can see that all JavaScript files are returning with no errors, and we added a CSS file just to show that the linter is properly working.
@@ -784,12 +825,19 @@ We tested our frontend application using an ES7 Linter in VSCode. We can see tha
 ### PEP8 Linter
 
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
+
 ![Inset image here](link-to-your-image)
 
 We used Code Institute’s PEP8 Linter to check for any errors in our backend code. As you can see, none were found.
@@ -797,13 +845,21 @@ We used Code Institute’s PEP8 Linter to check for any errors in our backend co
 ### Lighthouse
 
 ![Lighthouse Sign Up](assets\images\Lighthouse\Lighthouse_signup.jpg)
+
 ![Lighthouse Sign In](assets\images\Lighthouse\Lighthouse_signin.jpg)
+
 ![Lighthouse Home](assets\images\Lighthouse\Lighthouse_home.jpg)
+
 ![Lighthouse View Task](assets\images\Lighthouse\Lighthouse_viewtask.jpg)
+
 ![Lighthouse Edit Task](assets\images\Lighthouse\Lighthouse_edittask.jpg)
+
 ![Lighthouse Profile](assets\images\Lighthouse\Lighthouse_profile.jpg)
+
 ![LighthouseProfile Edit](assets\images\Lighthouse\Lighthouse_edit_profile.jpg)
+
 ![Lighthouse Rewards](assets\images\Lighthouse\Lighthouse_rewards.jpg)
+
 ![Lighthouse About](assets\images\Lighthouse\Lighthouse_about.jpg)
 
 We checked our Lighthouse score on each of our pages, and as you can see, we scored quite highly in each different metric.
@@ -811,6 +867,7 @@ We checked our Lighthouse score on each of our pages, and as you can see, we sco
 ### W3C
 
 ![W3C HTML](assets\images\W3CHTML\w3c_html.jpg)
+
 ![W3C CSS](assets\images\W3CCSS\W3C_CSS.jpg)
 
 We used W3C to check our HTML and CSS to make sure there were no errors. As you can see, we have no errors in our code.
@@ -959,3 +1016,4 @@ I would like to extend my gratitude to the following individuals and organizatio
 - **ChatGPT**: I appreciate the help with writing the "About" section of the application and for assistance with debugging. Your insights and suggestions have greatly enhanced the quality of this project.
 
 - **My Mentor**: A special thank you to my mentor for their continuous support and guidance throughout this project. Your expertise and feedback have been crucial to its success.
+</div>
