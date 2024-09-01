@@ -30,21 +30,19 @@
    - [Lighthouse](#lighthouse)
    - [W3C](#w3c)
 7. [Technologies](#technologies)
+
 8. [Bugs](#bugs)
    - [Fixed Bugs](#fixed-bugs)
    - [Current Bugs](#current-bugs)
 9. [Entity-Relationship Diagram](#entity-relationship-diagram)
     - [Relationships](#relationships)
+10. [Django Backend Overview](#django-backend-overview)
+    - [Models and Access Control](#models-and-access-control)
+    - [Access Control](#access-control)
+11. [Deployment Guide: React Frontend with Django Backend on Heroku](#deployment-guide-react-frontend-with-django-backend-on-heroku)
+12. [Credits](#credits)
 
 
-
-Relationships
-
-
-
-## User Scenarios
-
-### User 1: Sam
 
 ## The Application
 
@@ -58,33 +56,37 @@ We wanted to make an application that would be easy to understand right away and
 
 **Sign Up**
 
-![Wireframe SignUp](path/to/image/SignUpWireframe.png)
+![Wireframe SignUp SML](assets/images/SignUpPage/SignUpPage_Small_Wireframe.jpg)
+![Wireframe SignUp MED](assets\images\SignUpPage\SignUpPage_Med_Wireframe.jpg)
 
 As you can see, we kept the design fairly simple with the user only needing to add in their username and their password. We also included our logo for the application on the right-hand side so potential users could get an idea of the application right away. We also added an embedded link if the person would like to sign in instead, and a link to the about page if they wanted some more information right away.
 
-![SignUp SML](path/to/image/SignUpSML.png)
-![SignUp MED](path/to/image/SignUpMED.png)
-![SignUp LRG](path/to/image/SignUpLRG.png)
+![SignUp SML](assets\images\SignUpPage\SignUpPage_Small.jpg)
+![SignUp MED](assets\images\SignUpPage\SignUpPage_Med.jpg)
+![SignUp LRG](assets\images\SignUpPage\SignUpPage_Lrg.jpg)
 
 **Sign In**
 
-![Wireframe SignIn](path/to/image/SignInWireframe.png)
+![Wireframe SignIn SML](assets\images\SignInPage\SignInPage_Small_Wireframe.jpg)
+![Wireframe SignIn MED](assets\images\SignInPage\SignInPage_Medium_Wireframe.jpg)
+![Wireframe SignIn LRG](assets\images\SignInPage\SignInPage_Large_Wireframe.jpg)
+
 
 For the sign-in page, we also kept it simple, looking much like the sign-up page, with the two links included at the bottom.
 
-![SignIn SML](path/to/image/SignInSML.png)
-![SignIn MED](path/to/image/SignInMED.png)
-![SignIn LRG](path/to/image/SignInLRG.png)
+![SignIn SML](assets\images\SignInPage\SignInPage_Small.jpg)
+![SignIn MED](assets\images\SignInPage\SignInPage_Medium.jpg)
+![SignIn LRG](assets\images\SignInPage\SignInPage_Large.jpg)
 
 **About**
 
-![Wireframe About](path/to/image/AboutWireframe.png)
+![Wireframe About](assets\images\AboutPage\AboutPage_Wireframe.jpg)
 
 We added this page so the user could learn more about the app, just in case they were unsure of what our app was about. We also added this for visually impaired users; this is just a section about what you can do with our app.
 
-![About SML](path/to/image/AboutSML.png)
-![About MED](path/to/image/AboutMED.png)
-![About LRG](path/to/image/AboutLRG.png)
+![About SML](assets\images\AboutPage\AboutPage_SML.jpg)
+![About MED](assets\images\AboutPage\AboutPage_MED.jpg)
+![About LRG](assets\images\AboutPage\AboutPage_LRG.jpg)
 
 **NavBar**
 
@@ -92,7 +94,7 @@ Our NavBar will change once someone is logged in or out, and will also be highli
 
 **Home Page**
 
-![Wireframe Home](path/to/image/HomeWireframe.png)
+![Wireframe Home](assets\images\CalendarPage\CalendarPage_Wireframe.jpg)
 
 This is our main landing page, where the user can see their calendar, switch between months, and check their tasks on a given day.
 
@@ -102,9 +104,9 @@ We also have our task view at the bottom of the page, which includes icons for v
 
 We also included an add task to this component and the user will be taken to add a task on that day, as opposed to the add task button on the top left, which will go to a task for that day.
 
-![Home SML](path/to/image/HomeSML.png)
-![Home MED](path/to/image/HomeMED.png)
-![Home LRG](path/to/image/HomeLRG.png)
+![Home SML](assets\images\CalendarPage\CalendarPage_SML.jpg)
+![Home MED](assets\images\CalendarPage\CalendarPage_MED.jpg)
+![Home LRG](assets\images\CalendarPage\CalendarPage_LRG.jpg)
 
 **Create Task**
 
@@ -112,59 +114,61 @@ We also included an add task to this component and the user will be taken to add
 
 Here we have our create task page. The user can add a title and pick amongst other details of their task. We included a date picker for the date of the task and we also included some error handling if the user chooses to create a task in the past.
 
-![Create Task SML](path/to/image/CreateTaskSML.png)
-![Create Task MED](path/to/image/CreateTaskMED.png)
-![Create Task LRG](path/to/image/CreateTaskLRG.png)
+![Create Task SML](assets\images\CreateTaskPage\CreateTask_SML.jpg)
+![Create Task MED](assets\images\CreateTaskPage\CreateTask_MED.jpg)
+![Create Task LRG](assets\images\CreateTaskPage\CreateTask_LRG.jpg)
 
 **View Task**
 
-![Wireframe View Task](path/to/image/ViewTaskWireframe.png)
+![Wireframe View Task](assets\images\ViewTaskPage\ViewTask_Wireframe.jpg)
 
 We added a view task page for this app so the user can check for more information about their task, like description, category, or type of task. We made this read-only, just in case the user might change something and not realize.
 
-![View Task SML](path/to/image/ViewTaskSML.png)
-![View Task MED](path/to/image/ViewTaskMED.png)
-![View Task LRG](path/to/image/ViewTaskLRG.png)
+![View Task SML](assets\images\ViewTaskPage\ViewTask_SML.jpg)
+![View Task MED](assets\images\ViewTaskPage\ViewTask_MED.jpg)
+![View Task LRG](assets\images\ViewTaskPage\ViewTask_LRG.jpg)
 
 **Edit Task**
 
-![Wireframe Edit Task](path/to/image/EditTaskWireframe.png)
+![Wireframe Edit Task](assets\images\EditTaskPage\EditTaskPage_Wireframe.jpg)
 
 This page is quite similar to the create task page for layout. We have also included error handling to make sure the user actually wants to update a task, and an additional warning so they know they are changing a task to be in the past.
 
-![Edit Task SML](path/to/image/EditTaskSML.png)
-![Edit Task MED](path/to/image/EditTaskMED.png)
-![Edit Task LRG](path/to/image/EditTaskLRG.png)
+![Edit Task SML](assets\images\EditTaskPage\EditTaskPage_SML.jpg)
+![Edit Task MED](assets\images\EditTaskPage\EditTaskPage_MED.jpg)
+![Edit Task LRG](assets\images\EditTaskPage\EditTaskPage_LRG.jpg)
 
 **Profile**
 
-![Wireframe Profile](path/to/image/ProfileWireframe.png)
+![Wireframe Profile](assets\images\ProfilePage\ProfilePage_Wireframe.jpg)
 
 Here we give the user a chance to look at their profile. They can change their image, their bio, and look at their completed tasks so far. We’ve also included an edit profile section alongside a rewards page.
 
-![Profile SML](path/to/image/ProfileSML.png)
-![Profile MED](path/to/image/ProfileMED.png)
-![Profile LRG](path/to/image/ProfileLRG.png)
+![Profile SML](assets\images\ProfilePage\ProfilePage_SML.jpg)
+![Profile MED](assets\images\ProfilePage\ProfilePage_MED.jpg)
+![Profile LRG](assets\images\ProfilePage\ProfilePage_LRG.jpg)
 
 **Edit Profile**
 
-![Wireframe Profile Edit](path/to/image/ProfileEditWireframe.png)
+![Wireframe Profile Edit](assets\images\EditProfilePage\EditProfile_Wireframe.jpg)
 
 Here we have kept the form simple, and users can upload their image or change their bio on this screen.
 
-![Profile Edit SML](path/to/image/ProfileEditSML.png)
-![Profile Edit MED](path/to/image/ProfileEditMED.png)
-![Profile Edit LRG](path/to/image/ProfileEditLRG.png)
+![Profile Edit SML](assets\images\EditProfilePage\EditProfile_SML.jpg)
+![Profile Edit MED](assets\images\EditProfilePage\EditProfile_MED.jpg)
+![Profile Edit LRG](assets\images\EditProfilePage\EditProfile_LRG.jpg)
 
 **Rewards Page**
 
-![Wireframe Rewards](path/to/image/RewardsWireframe.png)
+![Wireframe Rewards SML](assets\images\RewardsPage\RewardsPage_SML_Wireframe.jpg)
+![Wireframe Rewards MED](assets\images\RewardsPage\RewardsPage_MED_Wireframe.jpg)
+![Wireframe Rewards LRG](assets\images\RewardsPage\RewardsPage_LRG_Wireframe.jpg)
 
 We included a simple rewards page to keep the user engaged and give them something to work towards. The rewards are locked and gray until the user completes the task, after which the color appears. We went for bright colors to keep the user enthusiastic. One of the challenges is to never have an overdue task, so we added this to always keep the user interested.
 
-![Rewards SML](path/to/image/RewardsSML.png)
-![Rewards MED](path/to/image/RewardsMED.png)
-![Rewards LRG](path/to/image/RewardsLRG.png)
+![Rewards SML](assets\images\RewardsPage\RewardsPage_SML.jpg)
+![Rewards MED](assets\images\RewardsPage\RewardsPage_MED.jpg)
+![Rewards LRG](assets\images\RewardsPage\RewardsPage_LRG.jpg)
 
 ### Other Features of Our Application
 
@@ -174,7 +178,9 @@ We have also included the icons for viewing, editing, and deleting to give the a
 
 We also put a line through the task if it is complete so the user has another way to identify that their task is complete.
 
-![Complete, Crossed Out Task Notification](path/to/image/CompleteCrossedOutTaskNotification.png)
+![Complete, Crossed Out Task Notification](assets\images\Taskcomplete\testing_task_complete.jpg)
+![Incomplete, Task Notification](passets\images\Taskcomplete\testing_task_incomplete.jpg)
+
 
 ### Future Features
 
@@ -210,7 +216,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Confirmation email is sent upon successful sign-up.
   - **Related Page**: Sign-Up Page (xxx)
   - **Mapping to Goals**: This feature enables users to create accounts, which is critical for user management.
-  - **GitHub Issue**: [#16](https://github.com/your-repo/issues/16)
+  - **GitHub Issue**: [#15](https://github.com/users/Connall1234/projects/4/views/1?pane=issue&itemId=78156318)
 
 - **User Story 2: User Sign-In Form**
   - **Priority**: High
@@ -219,7 +225,7 @@ We went with a light design with some other bright colors splashed in for this p
     - System displays error messages for incorrect credentials.
   - **Related Page**: Sign-In Page (xxx)
   - **Mapping to Goals**: This feature allows users to access their accounts, supporting user engagement and access control.
-  - **GitHub Issue**: [#17](https://github.com/your-repo/issues/17)
+  - **GitHub Issue**: [#16](https://github.com/Connall1234/ci-project-5-frontend/issues/16)
 
 ### Alignment with Project Goals
 - **Goal 1**: Implement secure user authentication.
@@ -241,7 +247,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Task is saved and displayed in the user's task list.
   - **Related Page**: Create Task Page (xxx)
   - **Mapping to Goals**: This feature allows users to add new tasks, which is essential for task tracking and management.
-  - **GitHub Issue**: [#18](https://github.com/your-repo/issues/18)
+  - **GitHub Issue**: [#18](https://github.com/Connall1234/ci-project-5-frontend/issues/18)
 
 - **User Story 2: Edit Task**
   - **Priority**: High
@@ -251,7 +257,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Changes are saved and updated in the user's task list.
   - **Related Page**: Edit Task Page (xxx)
   - **Mapping to Goals**: This feature allows users to modify existing tasks, helping in maintaining up-to-date task information.
-  - **GitHub Issue**: [#19](https://github.com/your-repo/issues/19)
+  - **GitHub Issue**: [#19](https://github.com/Connall1234/ci-project-5-frontend/issues/19)
 
 - **User Story 3: Delete Task**
   - **Priority**: Medium
@@ -261,7 +267,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Deleted task is removed from the user's task list and database.
   - **Related Page**: Task List Page (xxx)
   - **Mapping to Goals**: This feature allows users to remove tasks they no longer need, keeping their task list relevant.
-  - **GitHub Issue**: [#20](https://github.com/your-repo/issues/20)
+  - **GitHub Issue**: [#20](https://github.com/Connall1234/ci-project-5-frontend/issues/20)
 
 - **User Story 4: Mark Task as Complete**
   - **Priority**: High
@@ -271,7 +277,7 @@ We went with a light design with some other bright colors splashed in for this p
     - System updates task status and saves the change.
   - **Related Page**: Task List Page (xxx)
   - **Mapping to Goals**: This feature enables users to track completed tasks, enhancing task management and progress tracking.
-  - **GitHub Issue**: [#21](https://github.com/your-repo/issues/21)
+  - **GitHub Issue**: [#21](https://github.com/Connall1234/ci-project-5-frontend/issues/21)
 
 ### Alignment with Project Goals
 - **Goal 1**: Provide comprehensive task management.
@@ -293,7 +299,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Profile page is accessible from the user’s account menu.
   - **Related Page**: Profile Page (xxx)
   - **Mapping to Goals**: This feature allows users to see their profile details and activity, enhancing their overall experience and engagement with the application.
-  - **GitHub Issue**: [#22](https://github.com/your-repo/issues/22)
+  - **GitHub Issue**: [#23](https://github.com/Connall1234/ci-project-5-frontend/issues/23)
 
 - **User Story 2: Edit Profile**
   - **Priority**: High
@@ -303,7 +309,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Changes are saved and updated in the user's profile.
   - **Related Page**: Edit Profile Page (xxx)
   - **Mapping to Goals**: This feature allows users to keep their profile information up-to-date, which is crucial for maintaining accurate user data and personalization.
-  - **GitHub Issue**: [#23](https://github.com/your-repo/issues/23)
+  - **GitHub Issue**: [#24](https://github.com/Connall1234/ci-project-5-frontend/issues/24)
 
 - **User Story 3: View Rewards**
   - **Priority**: Medium
@@ -313,7 +319,7 @@ We went with a light design with some other bright colors splashed in for this p
     - Rewards page is accessible from the user’s account menu.
   - **Related Page**: Rewards Page (xxx)
   - **Mapping to Goals**: This feature allows users to track their achievements and rewards, motivating continued engagement and usage of the application.
-  - **GitHub Issue**: [#24](https://github.com/your-repo/issues/24)
+  - **GitHub Issue**: [#25](https://github.com/Connall1234/ci-project-5-frontend/issues/25)
 
 ### Alignment with Project Goals
 - **Goal 1**: Enhance user profile management.
@@ -424,7 +430,8 @@ To ensure that the task creation functionality works as expected, including vali
 - **Invalid Input**: Leaving the title field empty.
 - **Expected Behavior**: An error message such as "Title is required" should appear, and the task should not be created.
 
----
+**Image**:
+![Test Data Validation](assets\images\CreateTask\testing_create_task_please_fill_in_fields.jpg)
 
 #### **Test Case 2: Past Date Notification**
 
@@ -443,6 +450,9 @@ To ensure that the task creation functionality works as expected, including vali
 **Example**:
 - **Past Date Input**: Setting the start date to "2023-01-01" (a date in the past).
 - **Expected Behavior**: A notification should appear, such as "This is a task in the past. Are you sure you want to update it?".
+
+**Image**:
+![Test Past Date](assets\images\CreateTask\testing_create_task_task_in_past.jpg)
 
 ### Testing Scenario: Editing a Task
 
@@ -469,6 +479,9 @@ To ensure that the task editing functionality works as expected, including valid
 - **Invalid Input**: Leaving the title field empty.
 - **Expected Behavior**: An error message such as "Title is required" should appear, and the task should not be updated.
 
+**Image**:
+![Test Edit Task Validate Data](assets\images\Edittask\testing_edit_task_fill_in_fields.jpg)
+
 #### **Test Case 2: Past Date Notification**
 
 **Description**: Ensure that the system notifies the user if they attempt to set the task's start date to a date in the past while editing the task.
@@ -487,7 +500,8 @@ To ensure that the task editing functionality works as expected, including valid
 - **Past Date Input**: Setting the start date to "2023-01-01" (a date in the past).
 - **Expected Behavior**: A notification should appear, such as "This is a task in the past. Are you sure you want to update it?".
 
----
+**Image**:
+![Test Edit Task Past Date](assets\images\Edittask\testing_edit_task_past_task.jpg)
 
 #### **Test Case 3: Edit Confirmation Notification**
 
@@ -504,6 +518,9 @@ To ensure that the task editing functionality works as expected, including valid
 **Example**:
 - **Change Confirmation**: After editing the task details.
 - **Expected Behavior**: A confirmation message such as "Are you sure you want to save these changes?" should appear before the changes are finalized.
+
+**Image**:
+![Sign-Up Validation Example](insert-your-image-link-here)
 
 ### Testing Scenario: Deleting a Task
 
@@ -530,6 +547,9 @@ To verify that the task deletion functionality works as expected, including the 
 - **Deletion Confirmation**: Click on "Delete" for a task.
 - **Expected Behavior**: A confirmation dialog should appear with a message like "Are you sure you want to delete this task?" with options to confirm or cancel.
 
+**Image**:
+![Sign-Up Validation Example](insert-your-image-link-here)
+
 ### Testing Scenario: Marking Tasks as Complete/Incomplete
 
 #### **Objective**
@@ -555,6 +575,9 @@ To ensure that the task completion status can be toggled and the changes are ref
 - **Completion Action**: Click "Mark as Complete" for a task.
 - **Expected Behavior**: The task should be displayed with a "Completed" status, and this status should be visible in the profile section.
 
+**Image**:
+![Test Mark Task as Complete](assets\images\Taskcomplete\testing_task_complete.jpg)
+
 #### **Test Case 2: Mark Task as Incomplete**
 
 **Description**: Verify that a task marked as complete can be toggled back to incomplete, and the change is reflected in the profile section.
@@ -573,6 +596,9 @@ To ensure that the task completion status can be toggled and the changes are ref
 **Example**:
 - **Reversion Action**: Click "Mark as Incomplete" for a completed task.
 - **Expected Behavior**: The task should be displayed with an "Incomplete" status, and this status should be visible in the profile section.
+
+**Image**:
+![Test Mark Task as Incomplete](assets\images\Taskcomplete\testing_task_incomplete.jpg)
 
 ### Testing Scenario: Editing Your Profile
 
@@ -600,6 +626,9 @@ To verify that users can successfully edit their profile, including changing the
 **Example**:
 - **Edit Action**: Update the bio to "New bio text" and upload a new profile picture.
 - **Expected Behavior**: The profile should display "New bio text" in the bio section and the new profile picture after saving.
+
+**Image**:
+![Sign-Up Validation Example](insert-your-image-link-here)
 
 ### Testing Scenario: Rewards Page
 
@@ -651,6 +680,9 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **URL Attempted**: `https://yourapp.com/tasks/123`
 - **Expected Behavior**: User B sees an error message indicating that they do not have permission to view or edit the task.
 
+**Image**:
+![Test Unable to access others view task pages](assets\images\ViewTask\testing_view_task_cant_view_other_accounts_tasks.jpg)
+
 #### **Test Case 2: Unauthorized Access to Profile**
 
 **Description**: Verify that users cannot access or view profiles that do not belong to them by pasting the URL into a different browser.
@@ -670,6 +702,9 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 - **URL Attempted**: `https://yourapp.com/profiles/456`
 - **Expected Behavior**: User B receives a "Request Failed" message indicating they cannot access the profile.
 
+**Image**:
+![Test Can't Access Others Profile](assets\images\Profile\testing_profile_can't_access_other_profiles.jpg)
+
 #### **Test Case 3: Unauthorized Access to Edit Profile**
 
 **Description**: Verify that users cannot access or save changes to profiles that do not belong to them by pasting the URL into a different browser.
@@ -688,6 +723,9 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 **Example**:
 - **URL Attempted**: `https://yourapp.com/profiles/456/edit`
 - **Expected Behavior**: User B encounters an error message saying "Failed to Save" when trying to make changes.
+
+**Image**:
+![Sign-Up Validation Example](assets\images\Profile\testing_edit_profile_can't_access_other_profiles.jpg)
 
 ### Testing Scenario: Sign-Up and Login
 
@@ -713,7 +751,8 @@ To verify that the application correctly handles validation errors during the si
 - **Error Message for Mismatched Passwords**: "Passwords do not match. Please re-enter your password."
 
 **Image**:
-![Sign-Up Validation Example](insert-your-image-link-here)
+![Test Sign-Up Validation Example](assets\images\SignUp\testing_sign_up_password-close-to-username.jpg)
+![Test Sign-Up Validation Example](assets\images\SignUp\testing_sign_up_password-common-user-exists.jpg)
 
 #### **Test Case 2: Login Error Handling**
 
@@ -731,14 +770,14 @@ To verify that the application correctly handles validation errors during the si
 - **Error Message**: "Invalid username or password. Please check your credentials and try again."
 
 **Image**:
-![Login Error Example](insert-your-image-link-here)
+![Test Login Error Example](assets\images\SignIn\sign_in_test_wrong_login.jpg)
 
 ## Further Testing
 
 ### ES7 Testing
 
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
+![ES7 Linter Image One](assets\images\ES7Linter\Linteer_from_axios_to_about.jpg)
+![ES7 Linter Image Two](assets\images\ES7Linter\Linteer_from_about_to_config.jpg)
 
 We tested our frontend application using an ES7 Linter in VSCode. We can see that all JavaScript files are returning with no errors, and we added a CSS file just to show that the linter is properly working.
 
@@ -757,21 +796,22 @@ We used Code Institute’s PEP8 Linter to check for any errors in our backend co
 
 ### Lighthouse
 
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
+![Lighthouse Sign Up](assets\images\Lighthouse\Lighthouse_signup.jpg)
+![Lighthouse Sign In](assets\images\Lighthouse\Lighthouse_signin.jpg)
+![Lighthouse Home](assets\images\Lighthouse\Lighthouse_home.jpg)
+![Lighthouse View Task](assets\images\Lighthouse\Lighthouse_viewtask.jpg)
+![Lighthouse Edit Task](assets\images\Lighthouse\Lighthouse_edittask.jpg)
+![Lighthouse Profile](assets\images\Lighthouse\Lighthouse_profile.jpg)
+![LighthouseProfile Edit](assets\images\Lighthouse\Lighthouse_edit_profile.jpg)
+![Lighthouse Rewards](assets\images\Lighthouse\Lighthouse_rewards.jpg)
+![Lighthouse About](assets\images\Lighthouse\Lighthouse_about.jpg)
 
 We checked our Lighthouse score on each of our pages, and as you can see, we scored quite highly in each different metric.
 
 ### W3C
 
-![Inset image here](link-to-your-image)
-![Inset image here](link-to-your-image)
+![W3C HTML](assets\images\W3CHTML\w3c_html.jpg)
+![W3C CSS](assets\images\W3CCSS\W3C_CSS.jpg)
 
 We used W3C to check our HTML and CSS to make sure there were no errors. As you can see, we have no errors in our code.
 
@@ -854,4 +894,68 @@ The ER (Entity-Relationship) diagram represents the relationships between the th
 
 The relationships between these models ensure that the system can manage user profiles and tasks in a scalable and organized manner.
 
-![ER Diagram](path/to/your/er-diagram.png)
+![ER Diagram](assets\images\DatabseER\database_diagram.jpg)
+
+## Django Backend Overview
+
+The backend of this application is built using Python and the Django framework. The backend defines three main models: `User`, `Profile`, and `Task`. Each model supports full CRUD (Create, Read, Update, Delete) functionality, enabling users to create and manage their profiles and tasks efficiently. The `User` model, provided by Django's authentication system, handles authentication and associations with both `Profile` and `Task` models.
+
+### Models and Access Control
+
+- **Profile and Task Models**: 
+  - The `Profile` model is linked to the `User` model via a One-to-One relationship, storing additional user information such as a bio and profile image.
+  - The `Task` model is linked to the `User` model via a One-to-Many relationship, allowing each user to create and manage multiple tasks. Each task contains attributes like title, description, start date, completion status, priority, and category.
+  - Additionally, the `Task` model includes an `overdue` boolean value, which is set to `True` if the current date has passed the task's start date without the task being marked as completed. Tasks also have a `completed` boolean value that indicates whether or not the task has been finished. These fields help users track their task progress and manage overdue tasks effectively.
+
+### Access Control
+
+- **Superuser Access**: 
+  - The superuser, who is created during the Django setup, has full access to all profiles and tasks in the system. This allows the superuser to view, edit, and delete any user’s profile or task, providing complete administrative control over the backend.
+
+- **Standard User Access**: 
+  - Apart from the superuser, standard users can only access their own profiles and tasks. Users are restricted from accessing or modifying the profiles and tasks of other users. This access control is enforced by Django’s authentication and permission system, ensuring that user data remains secure and private.
+
+## Deployment Guide: React Frontend with Django Backend on Heroku
+
+This guide outlines the steps to deploy your full-stack application, which includes a React frontend and a Django backend, to Heroku. The React frontend communicates with the Django backend via Axios.
+
+### Prerequisites
+
+Before you start, ensure you have the following:
+- A [Heroku](https://heroku.com) account
+- Heroku CLI installed
+- Git installed
+- Node.js and Python installed on your machine
+- A PostgreSQL database (Heroku provides one in production)
+
+### 1. Set Up Your Django Backend for Deployment
+
+1. Install necessary packages, such as Gunicorn (for serving your Django app) and Whitenoise (for handling static files).
+2. Update the `settings.py` file:
+   - Configure `ALLOWED_HOSTS` for production.
+   - Set up static file handling using Whitenoise.
+   - Configure the database to use PostgreSQL in production (use `dj-database-url`).
+3. Create a `Procfile` in the root directory to specify the command to run your application (e.g., using Gunicorn).
+4. Collect static files for production.
+
+### 2. Set Up Your React Frontend for Deployment
+
+1. In your React project, update the Axios base URL to point to the production Django backend API.
+2. Build the React project using `npm run build` or `yarn build`. This generates static files for deployment.
+3. Ensure your React app is configured to handle routing properly on Heroku (e.g., using `BrowserRouter`).
+
+### 3. Prepare for Deployment on Heroku
+
+1. Create a Heroku app using the Heroku CLI:  
+   ```bash
+   heroku create your-app-name
+
+## Credits
+
+I would like to extend my gratitude to the following individuals and organizations for their invaluable support during this project:
+
+- **Code Institute**: Thank you for your assistance and for the guidance provided through the Moments project. Your resources and support have been instrumental in the development of this application.
+
+- **ChatGPT**: I appreciate the help with writing the "About" section of the application and for assistance with debugging. Your insights and suggestions have greatly enhanced the quality of this project.
+
+- **My Mentor**: A special thank you to my mentor for their continuous support and guidance throughout this project. Your expertise and feedback have been crucial to its success.
