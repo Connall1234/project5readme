@@ -549,7 +549,7 @@ To ensure that the task editing functionality works as expected, including valid
 
 **Example**:
 - **Change Confirmation**: After editing the task details.
-- **Expected Behavior**: A confirmation message such as "Are you sure you want to update this taks?" should appear before the changes are finalized.
+- **Expected Behavior**: A confirmation message such as "Are you sure you want to update this task?" should appear before the changes are finalized.
 
 **Image**:
 
