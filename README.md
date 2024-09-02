@@ -42,8 +42,11 @@
 11. [Deployment Guide: React Frontend with Django Backend on Heroku](#deployment-guide-react-frontend-with-django-backend-on-heroku)
 12. [Credits](#credits)
 
-
 ## The Application
+
+Welcome to OnTrack please see published site [here](https://ci-project-5-frontend-connall-0e9d76f51490.herokuapp.com/signin)
+
+![Intro](assets/images/Intro/responsive.jpg)
 
 ### Wireframes and features
 
@@ -120,7 +123,7 @@ We also included an add task to this component and the user will be taken to add
 
 **Create Task**
 
-![Wireframe Create Task](path/to/image/CreateTaskWireframe.png)
+![Wireframe Create Task](assets/images/CreateTaskPage/CreateTask_Wireframe.jpg)
 
 Here we have our create task page. The user can add a title and pick amongst other details of their task. We included a date picker for the date of the task and we also included some error handling if the user chooses to create a task in the past.
 
@@ -204,7 +207,7 @@ We also put a line through the task if it is complete so the user has another wa
 
 ![Complete, Crossed Out Task Notification](assets/images/Taskcomplete/testing_task_complete.jpg)
 
-![Incomplete, Task Notification](passets/images/Taskcomplete/testing_task_incomplete.jpg)
+![Incomplete, Task Notification](assets/images/Taskcomplete/testing_task_incomplete.jpg)
 
 
 ### Future Features
@@ -239,7 +242,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can enter a valid email and password.
     - System validates input and shows error messages for invalid inputs.
     - Confirmation email is sent upon successful sign-up.
-  - **Related Page**: Sign-Up Page (xxx)
+  - **Related Sprint**: Sprint 1
   - **Mapping to Goals**: This feature enables users to create accounts, which is critical for user management.
   - **GitHub Issue**: [#15](https://github.com/users/Connall1234/projects/4/views/1?pane=issue&itemId=78156318)
 
@@ -248,7 +251,7 @@ We went with a light design with some other bright colors splashed in for this p
   - **Acceptance Criteria**:
     - User can log in with valid credentials.
     - System displays error messages for incorrect credentials.
-  - **Related Page**: Sign-In Page (xxx)
+  - **Related Sprint**: Sprint 1
   - **Mapping to Goals**: This feature allows users to access their accounts, supporting user engagement and access control.
   - **GitHub Issue**: [#16](https://github.com/Connall1234/ci-project-5-frontend/issues/16)
 
@@ -270,7 +273,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can enter task details including title, description, start date, and priority.
     - System validates input and shows error messages for invalid or incomplete details.
     - Task is saved and displayed in the user's task list.
-  - **Related Page**: Create Task Page (xxx)
+  - **Related Sprint**: Sprint 2
   - **Mapping to Goals**: This feature allows users to add new tasks, which is essential for task tracking and management.
   - **GitHub Issue**: [#18](https://github.com/Connall1234/ci-project-5-frontend/issues/18)
 
@@ -280,7 +283,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can update task details including title, description, start date, and priority.
     - System validates input and shows error messages for invalid or incomplete details.
     - Changes are saved and updated in the user's task list.
-  - **Related Page**: Edit Task Page (xxx)
+  - **Related Sprint**: Sprint 2
   - **Mapping to Goals**: This feature allows users to modify existing tasks, helping in maintaining up-to-date task information.
   - **GitHub Issue**: [#19](https://github.com/Connall1234/ci-project-5-frontend/issues/19)
 
@@ -290,7 +293,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can delete a task from their task list.
     - System asks for confirmation before deletion.
     - Deleted task is removed from the user's task list and database.
-  - **Related Page**: Task List Page (xxx)
+  - **Related Sprint**: Sprint 2
   - **Mapping to Goals**: This feature allows users to remove tasks they no longer need, keeping their task list relevant.
   - **GitHub Issue**: [#20](https://github.com/Connall1234/ci-project-5-frontend/issues/20)
 
@@ -300,7 +303,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can mark a task as complete.
     - Completed tasks are visually distinguished from incomplete tasks.
     - System updates task status and saves the change.
-  - **Related Page**: Task List Page (xxx)
+  - **Related Sprint**: Sprint 3
   - **Mapping to Goals**: This feature enables users to track completed tasks, enhancing task management and progress tracking.
   - **GitHub Issue**: [#21](https://github.com/Connall1234/ci-project-5-frontend/issues/21)
 
@@ -322,7 +325,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can view their profile information including name, email, and profile picture.
     - User can view their recent activities and any relevant statistics.
     - Profile page is accessible from the user’s account menu.
-  - **Related Page**: Profile Page (xxx)
+  - **Related Sprint**: Sprint 3
   - **Mapping to Goals**: This feature allows users to see their profile details and activity, enhancing their overall experience and engagement with the application.
   - **GitHub Issue**: [#23](https://github.com/Connall1234/ci-project-5-frontend/issues/23)
 
@@ -332,7 +335,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can update their profile information including name, email, and profile picture.
     - System validates input and shows error messages for invalid or incomplete details.
     - Changes are saved and updated in the user's profile.
-  - **Related Page**: Edit Profile Page (xxx)
+  - **Related Sprint**: Sprint 3
   - **Mapping to Goals**: This feature allows users to keep their profile information up-to-date, which is crucial for maintaining accurate user data and personalization.
   - **GitHub Issue**: [#24](https://github.com/Connall1234/ci-project-5-frontend/issues/24)
 
@@ -342,7 +345,7 @@ We went with a light design with some other bright colors splashed in for this p
     - User can view their rewards, including earned points, badges, or other incentives.
     - Rewards page displays a list of rewards with details such as description and date earned.
     - Rewards page is accessible from the user’s account menu.
-  - **Related Page**: Rewards Page (xxx)
+  - **Related Sprint**: Sprint 3
   - **Mapping to Goals**: This feature allows users to track their achievements and rewards, motivating continued engagement and usage of the application.
   - **GitHub Issue**: [#25](https://github.com/Connall1234/ci-project-5-frontend/issues/25)
 
@@ -546,11 +549,11 @@ To ensure that the task editing functionality works as expected, including valid
 
 **Example**:
 - **Change Confirmation**: After editing the task details.
-- **Expected Behavior**: A confirmation message such as "Are you sure you want to save these changes?" should appear before the changes are finalized.
+- **Expected Behavior**: A confirmation message such as "Are you sure you want to update this taks?" should appear before the changes are finalized.
 
 **Image**:
 
-![Sign-Up Validation Example](insert-your-image-link-here)
+![Test Edit Task Past Date](assets/images/Edittask/testing_edit_task_past_task.jpg)
 
 ### Testing Scenario: Deleting a Task
 
@@ -579,7 +582,7 @@ To verify that the task deletion functionality works as expected, including the 
 
 **Image**:
 
-![Sign-Up Validation Example](insert-your-image-link-here)
+![Delete task](assets/images/DeleteTask/Delete_task.jpg)
 
 ### Testing Scenario: Marking Tasks as Complete/Incomplete
 
@@ -662,7 +665,12 @@ To verify that users can successfully edit their profile, including changing the
 
 **Image**:
 
-![Sign-Up Validation Example](insert-your-image-link-here)
+![Edit profile before](assets/images/EditProfile/Edit_profile_pic_before.jpg)
+
+![Edit profile during](assets/images/EditProfile/Edit_profile_pic_edit.jpg)
+
+![Edit profile after](assets/images/EditProfile/Edit_profile_pic_after.jpg)
+
 
 ### Testing Scenario: Rewards Page
 
@@ -708,11 +716,11 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 
 **Expected Result**:
 - User B should be denied access to view or edit the task.
-- The application should show an appropriate error message, such as "Access Denied" or "You do not have permission to view this task."
+- The application should show the user the loading screen which will not let them get to the task.
 
 **Example**:
-- **URL Attempted**: `https://yourapp.com/tasks/123`
-- **Expected Behavior**: User B sees an error message indicating that they do not have permission to view or edit the task.
+- **URL Attempted**: `https://ci-project-5-frontend-connall-0e9d76f51490.herokuapp.com/tasks/view/216`
+- **Expected Behavior**: User B gets the loading screen for the task that will not let them view the task.
 
 **Image**:
 
@@ -731,11 +739,11 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 
 **Expected Result**:
 - User B should be denied access to view the profile.
-- The application should display an error message like "Request Failed" or "You do not have permission to view this profile."
+- The application should show the user the "Failed to load profile data".
 
 **Example**:
-- **URL Attempted**: `https://yourapp.com/profiles/456`
-- **Expected Behavior**: User B receives a "Request Failed" message indicating they cannot access the profile.
+- **URL Attempted**: `https://ci-project-5-frontend-connall-0e9d76f51490.herokuapp.com/profiles/2`
+- **Expected Behavior**: User B receives the "Failed to load profile data".
 
 **Image**:
 
@@ -754,15 +762,15 @@ To ensure that unauthorized users cannot access or manipulate tasks or profiles 
 
 **Expected Result**:
 - User B should receive an error message indicating that they cannot edit the profile.
-- The application should show a message like "Failed to Save" or "Unauthorized Access."
+- The application should show a message like "Failed to load profile data".
 
 **Example**:
-- **URL Attempted**: `https://yourapp.com/profiles/456/edit`
-- **Expected Behavior**: User B encounters an error message saying "Failed to Save" when trying to make changes.
+- **URL Attempted**: `https://ci-project-5-frontend-connall-0e9d76f51490.herokuapp.com/profiles/3/edit`
+- **Expected Behavior**: User B encounters an error message saying "Failed to load profile data".
 
 **Image**:
 
-![Sign-Up Validation Example](assets/images/Profile/testing_edit_profile_can't_access_other_profiles.jpg)
+![Test can't access other profiles](assets/images/Profile/testing_edit_profile_can't_access_other_profiles.jpg)
 
 ### Testing Scenario: Sign-Up and Login
 
@@ -784,8 +792,9 @@ To verify that the application correctly handles validation errors during the si
 - The user should be prompted to correct the errors before submitting the form.
 
 **Example**:
-- **Error Message for Password Too Close to Username**: "Password is too similar to username. Please choose a different password."
-- **Error Message for Mismatched Passwords**: "Passwords do not match. Please re-enter your password."
+- **Error Message for Password Too Close to Username**: "The password is too similar to the username."
+- **Error Message for Mismatched Passwords**: "The two password fields didn't match."
+- **Error Message for Username taken**: "A user with that username already exists."
 
 **Image**:
 
@@ -803,10 +812,10 @@ To verify that the application correctly handles validation errors during the si
 3. Attempt to log in.
 
 **Expected Result**:
-- The system should display an error message indicating that the login attempt was unsuccessful, such as "Invalid username or password. Please try again."
+- The system should display an error message indicating that the login attempt was unsuccessful, such as "Unable to log in with provided credentials."
 
 **Example**:
-- **Error Message**: "Invalid username or password. Please check your credentials and try again."
+- **Error Message**: "Unable to log in with provided credentials."
 
 **Image**:
 
@@ -847,6 +856,8 @@ We used Code Institute’s PEP8 Linter to check for any errors in our backend co
 ![Lighthouse Sign Up](assets/images/Lighthouse/Lighthouse_signup.jpg)
 
 ![Lighthouse Sign In](assets/images/Lighthouse/Lighthouse_signin.jpg)
+
+![Lighthouse Create Task](assets/images/Lighthouse/Lighthouse_createtask.jpg)
 
 ![Lighthouse Home](assets/images/Lighthouse/Lighthouse_home.jpg)
 
