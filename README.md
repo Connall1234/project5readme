@@ -40,7 +40,9 @@
     - [Models and Access Control](#models-and-access-control)
     - [Access Control](#access-control)
 11. [Deployment Guide: React Frontend with Django Backend on Heroku](#deployment-guide-react-frontend-with-django-backend-on-heroku)
-12. [Credits](#credits)
+12. [Why React is Best Suited for This Application](#why-react-is-best-suited-for-this-application)
+13. [Backend Testing](#backend-testing)
+14. [Credits](#credits)
 
 ## The Application
 
@@ -834,23 +836,41 @@ We tested our frontend application using an ES7 Linter in VSCode. We can see tha
 
 ### PEP8 Linter
 
-![Inset image here](link-to-your-image)
+![Final_permission](assets/images/PEP8/final_permisisons.jpg)
 
-![Inset image here](link-to-your-image)
+![Final_serializer](assets/images/PEP8/final_serializer.jpg)
 
-![Inset image here](link-to-your-image)
+![Final_settings](assets/images/PEP8/final_settings.jpg)
 
-![Inset image here](link-to-your-image)
+We can see an error here, but as it's djangos code I understand it is fine.
 
-![Inset image here](link-to-your-image)
+![Final_urls](assets/images/PEP8/final_url.jpg)
 
-![Inset image here](link-to-your-image)
+![Final_views](assets/images/PEP8/final_views.jpg)
 
-![Inset image here](link-to-your-image)
+![Manage](assets/images/PEP8/manage_py.jpg)
 
-![Inset image here](link-to-your-image)
+We can see an error here, but as it's djangos code I understand it is fine.
 
-We used Code Institute’s PEP8 Linter to check for any errors in our backend code, none were found.
+![Profile_model](assets/images/PEP8/profile_model.jpg)
+
+![Profile_serializer](assets/images/PEP8/profile_serializer.jpg)
+
+![Profile_urls](assets/images/PEP8/profile_url.jpg)
+
+![Profile_views](assets/images/PEP8/profile_view.jpg)
+
+![Task_filters](assets/images/PEP8/task_filters.jpg)
+
+![Task_models](assets/images/PEP8/task_models.jpg)
+
+![Task_serializer](assets/images/PEP8/task_serializer.jpg)
+
+![Task_urls](assets/images/PEP8/task_url.jpg)
+
+![Task_views](assets/images/PEP8/task_view.jpg)
+
+We used Code Institute’s PEP8 Linter to check for any errors in our backend code.
 
 ### Lighthouse
 
@@ -945,6 +965,8 @@ There was an issue with uploading profile pictures to Cloudinary. After reviewin
 #### Websocket
 We are currently experiencing an issue where the console logs a message every minute while the application is idle, indicating that a websocket is not connecting. However, this does not appear to impact the application's functionality. We plan to address this bug in the future.
 
+![Websocked Bug](assets/images/Final_images/websocket_bug.jpg)
+
 #### Babel Plugin
 We receive a warning in our terminal about needing to update a Babel plugin. We previously attempted to make this change, but it completely broke the application. We will work on resolving this issue in the future.
 
@@ -1005,7 +1027,8 @@ Before you start, ensure you have the following:
    - Set up static file handling using Whitenoise.
    - Configure the database to use PostgreSQL in production (use `dj-database-url`).
 3. Create a `Procfile` in the root directory to specify the command to run your application (e.g., using Gunicorn).
-4. Collect static files for production.
+4. Add env.py file to your gitignore so any secret keys aren't shared.
+5. Collect static files for production.
 
 ### 2. Set Up Your React Frontend for Deployment
 
@@ -1018,6 +1041,79 @@ Before you start, ensure you have the following:
 1. Create a Heroku app using the Heroku CLI:  
    ```bash
    heroku create your-app-name
+
+
+## Why React is Best Suited for This Application
+
+This application leverages React's powerful component-based architecture, making it an ideal choice for the project. React allows us to efficiently break down the UI into reusable components, which can be used across different parts of the application. This promotes modularity, simplifies development, and makes the codebase more maintainable and scalable. React's ability to manage state and efficiently update the DOM with its virtual DOM capabilities ensures that the application remains responsive and performant even as complexity grows.
+
+By using React, we can ensure that each part of the UI, from task displays to calendar views, is well-structured and can be easily updated or extended in the future. This aligns with the project's goals of providing a dynamic, user-friendly, and feature-rich experience.
+
+### Reusable Components
+
+The application consists of several reusable components, each serving a distinct purpose within the UI. Below is a list of the key reusable components implemented in the application:
+
+### 1. **Task List**
+   - **Description:** A component responsible for displaying a list of tasks.
+   - **Reusability:** This component can be reused to display tasks across different pages, such as in the dashboard, specific project views, or in daily task overviews.
+
+### 2. **Task Item**
+   - **Description:** A single task item within the task list, showing details like task name, due date, and status.
+   - **Reusability:** This component is used by the `TaskList` component and can be customized or extended to fit different types of tasks (e.g., with subtasks or priority markers).
+
+### 3. **Calendar**
+   - **Description:** Displays a monthly calendar view.
+   - **Reusability:** This component can be reused in different sections of the application, such as on the main dashboard or within specific project or team views to provide a consistent calendar interface.
+
+### 4. **Event Item**
+   - **Description:** Represents an individual event displayed on the calendar.
+   - **Reusability:** This component can be reused across different calendar views (e.g., daily, weekly, monthly) and customized to display different types of events.
+
+### 5. **Form Input**
+   - **Description:** A form input component for entering or editing task or event details.
+   - **Reusability:** This is a highly reusable component that can be used for various forms throughout the application, such as creating or editing tasks, events, profiles.
+
+### 6. **Button**
+   - **Description:** A generic button component used across the application.
+   - **Reusability:** This component can be reused in any part of the application that requires user interaction, such as form submissions, navigation actions, or toggling UI elements.
+
+### 7. **Modal**
+   - **Description:** A modal component for displaying popup dialogs, such as task or event creation forms.
+   - **Reusability:** The modal can be reused for various purposes, such as confirming actions, displaying forms, or providing additional information to the user without navigating away from the current page.
+
+### 8. **Navbar**
+   - **Description:** A navigation bar component for navigating between different sections of the application.
+   - **Reusability:** The navbar can be reused across all pages of the application, ensuring consistent navigation and branding.
+
+By building the application with these reusable components, we ensure a consistent user experience and make it easier to maintain and extend the codebase over time.
+
+## Backend Testing
+
+### Access Control Testing
+
+We conducted a series of tests to ensure that access control is properly enforced on both the profiles and tasks endpoints. These tests were designed to verify that users cannot access data unless they are authenticated and that they can only view their own data once logged in.
+
+#### 1. Access Without Authentication
+- **Test Description**: Attempted to access the `/profiles` and `/tasks` endpoints without being logged in.
+- **Expected Outcome**: The system should return a 401 Unauthorized response, blocking access to these resources.
+- **Result**: As expected, the system successfully blocked access, returning the appropriate 401 status code.
+
+![Tasks with no access](assets/images/Final_images/backend_unable_to_see_tasks_not_loggedin.jpg)
+
+![Profiles with no access](assets/images/Final_images/backend_unable_to_see_profiles_not_loggedin.jpg)
+
+
+#### 2. Access With Authentication
+- **Test Description**: Logged in as a user and attempted to access the `/profiles` and `/tasks` endpoints.
+- **Expected Outcome**: The user should only be able to view their own profile and tasks.
+- **Result**: Upon authentication, the system allowed access to the user's profile and tasks, but no other users' data was accessible.
+
+![Tasks with access](assets/images/Final_images/backend_able_to_see_tasks_loggedin.jpg)
+
+![Profiles with access](assets/images/Final_images/backend_able_to_see_profiles_loggedin.jpg)
+### Summary
+
+These tests confirmed that the backend correctly enforces authentication and authorization rules, ensuring that user data is secure and private.
 
 ## Credits
 
