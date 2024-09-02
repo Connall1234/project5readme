@@ -850,7 +850,7 @@ We tested our frontend application using an ES7 Linter in VSCode. We can see tha
 
 ![Inset image here](link-to-your-image)
 
-We used Code Institute’s PEP8 Linter to check for any errors in our backend code. As you can see, none were found.
+We used Code Institute’s PEP8 Linter to check for any errors in our backend code, none were found.
 
 ### Lighthouse
 
