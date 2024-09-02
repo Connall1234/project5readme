@@ -788,13 +788,14 @@ To verify that the application correctly handles validation errors during the si
 3. Attempt to submit the form.
 
 **Expected Result**:
-- The system should display an error message indicating why the password is invalid, such as "Password is too close to username" or "Passwords do not match."
+- The system should display an error message indicating why the password is invalid, such as "Password is too similar to username" or "The two password fields didn't match."
 - The user should be prompted to correct the errors before submitting the form.
 
 **Example**:
 - **Error Message for Password Too Close to Username**: "The password is too similar to the username."
 - **Error Message for Mismatched Passwords**: "The two password fields didn't match."
-- **Error Message for Username taken**: "A user with that username already exists."
+- **Error Message for Username Taken**: "A user with that username already exists."
+- **Error Message for Password Too Common**: "This password is too common."
 
 **Image**:
 
